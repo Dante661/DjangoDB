@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+    {% comment %} <input type="text" id="text" style="width: 150px;" />
+    <input type="submit" value="Send" class="submit-btn" /> {% endcomment %}
+<p>Find slaves:</p>
+
+<table border='1'>
+  <tr>
+    <th>ID</th>
+    <th>empname</th>
+    <th>email</th>
+    <th>occuapation</th>
+    <th>salary</th>
+    <th>gender</th>
+  </tr>
+  {% for result in data %}
+    <tr>
+      <td>{{ result.id }}</td>
+      <td>{{ result.empname }}</td>
+      <td>{{ result.email }}</td>
+      <td>{{ result.occuapation }}</td>
+      <td>{{ result.salary }}</td>
+      <td>{{ result.gender }}</td>
+      <td><a href="{% url 'Editemp' id=result.id %}">Edit</a></td>
+      <td><a href="{% url 'deleteemp' id=result.id %}" onclick= "return confirm('Are u sure del?')">Delete</a></td>
+    </tr>
+  {% endfor %}
+</table>
+</tr>
+</table>
+<a href="{% url 'showemp' %}">Home page</a>" 
+</body>
+</html>  
