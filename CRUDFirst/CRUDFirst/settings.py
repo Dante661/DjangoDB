@@ -33,13 +33,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
+    "CRUDFirst",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "CRUDFirst",
     'accounts.apps.AccountsConfig',
     'corsheaders',
 ]
@@ -85,7 +85,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": 'MayoShop',
         'USER': 'postgres',
-        'PASSWORD': 'sss',
+        'PASSWORD': 'Sss',
         'HOST': 'localhost',
         'PORT': '5432',
     }}
